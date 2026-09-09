@@ -64,6 +64,6 @@ XMagital 是面向工业场景的企业知识库系统。工业文档里很多�
 
 ## 关联页面
 - index
-- [XMagital项目面试速查卡](XMagital项目面试速查卡.html)
-- [XMagital项目数据口径](XMagital项目数据口径.html)
-- [团队协作与职责边界](团队协作与职责边界.html)
+- [[XMagital项目面试速查卡]]
+- [[XMagital项目数据口径]]
+- [[团队协作与职责边界]]

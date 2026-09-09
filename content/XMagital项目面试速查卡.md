@@ -51,7 +51,7 @@ XMagital 是一个面向工业场景的企业知识库系统，用来解决通�
 
 ## 关联页面
 - index
-- [XMagital项目叙事脚本](XMagital项目叙事脚本.html)
-- [XMagital项目数据口径](XMagital项目数据口径.html)
-- [XMagital面试防御清单](XMagital面试防御清单.html)
+- [[XMagital项目叙事脚本]]
+- [[XMagital项目数据口径]]
+- [[XMagital面试防御清单]]
 - 项目经历

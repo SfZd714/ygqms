@@ -42,10 +42,14 @@ def scrub(text: str) -> str:
         name, label = m.group(1).strip(), m.group(2)
         if name in EXCLUDED_LINKS:
             return label or name
-        return f'[{label or name}]({slug(name)}.html)'
+        # Keep publishable Obsidian links intact. The site builder owns the
+        # final category-aware URL mapping.
+        return f'[[{name}|{label}]]' if label else f'[[{name}]]'
     text = re.sub(r'\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]', link, text)
-    # Remove source/local metadata lines that may expose internal structure.
-    text = re.sub(r'(?im)^\s*(?:source_url|source|项目地址|原始资料)\s*[:：].*$', '', text)
+    # Remove source/local metadata lines and malformed Markdown links left by
+    # redaction so they cannot become broken public links.
+    text = re.sub(r'(?im)^\s*(?:source_url|source|项目地址|原始资料)\s*[:：|].*$', '', text)
+    text = re.sub(r'\[[^\]]+\]\(http\[本地路径已隐藏\]\)', '[相关私有链接已隐藏]', text)
     return text.strip() + '\n'
 
 
