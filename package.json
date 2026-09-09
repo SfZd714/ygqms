@@ -1,0 +1,1 @@
+{"name":"ygqms-interview-wiki","private":true,"scripts":{"build":"node scripts/build.mjs","dev":"python -m http.server 4173 -d dist"},"dependencies":{"marked":"^15.0.6"},"devDependencies":{}}

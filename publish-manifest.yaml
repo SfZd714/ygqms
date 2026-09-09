@@ -1,0 +1,18 @@
+include:
+  - wiki/interview/AI应用开发岗位STAR故事库.md
+  - wiki/interview/XMagital面试防御清单.md
+  - wiki/interview/XMagital项目叙事脚本.md
+  - wiki/interview/XMagital项目数据口径.md
+  - wiki/interview/XMagital项目面试速查卡.md
+  - wiki/interview/团队协作与职责边界.md
+  - wiki/interview/央国企研究所项目面试问答.md
+  - wiki/interview/科研院所面试专项.md
+  - wiki/interview/护城河与不可替代性.md
+  - wiki/interview/高频问答库.md
+  - wiki/projects/千言·AI智能助手后端系统.md
+
+exclude:
+  - personal_information
+  - contact_and_family
+  - private_interview_defense
+  - configs_and_local_paths
