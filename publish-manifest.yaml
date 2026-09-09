@@ -10,6 +10,9 @@ include:
   - wiki/interview/护城河与不可替代性.md
   - wiki/interview/高频问答库.md
   - wiki/projects/千言·AI智能助手后端系统.md
+extra_public_cards:
+  - 面试自我介绍版本.md
+  - 面试高频速背卡.md
 
 exclude:
   - personal_information

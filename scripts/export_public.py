@@ -63,7 +63,13 @@ for rel in INCLUDE:
     dst=OUT / src.name
     dst.write_text(scrub(src.read_text(encoding='utf-8', errors='ignore')), encoding='utf-8')
     manifest.append(src.name)
+# Public memorization cards are curated separately from the private vault.
+EXTRA = ROOT / 'public-extra'
+for src in sorted(EXTRA.glob('*.md')):
+    dst = OUT / src.name
+    dst.write_text(scrub(src.read_text(encoding='utf-8', errors='ignore')), encoding='utf-8')
+    manifest.append(src.name)
 (OUT/'index.md').write_text('# 央国企 / 科研院所面试知识库\n\n公开脱敏版：项目表达、技术总结、结构化面试和研究所求职方法。\n',encoding='utf-8')
-(ROOT/'publish-manifest.yaml').write_text('include:\n' + ''.join(f'  - {x}\n' for x in INCLUDE) + '\nexclude:\n  - personal_information\n  - contact_and_family\n  - private_interview_defense\n  - configs_and_local_paths\n',encoding='utf-8')
+(ROOT/'publish-manifest.yaml').write_text('include:\n' + ''.join(f'  - {x}\n' for x in INCLUDE) + 'extra_public_cards:\n' + ''.join(f'  - {x.name}\n' for x in sorted(EXTRA.glob('*.md'))) + '\nexclude:\n  - personal_information\n  - contact_and_family\n  - private_interview_defense\n  - configs_and_local_paths\n',encoding='utf-8')
 print('exported',len(manifest),'pages')
 for x in manifest: print(x)
