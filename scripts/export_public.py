@@ -14,9 +14,12 @@ INCLUDE = [
     'wiki/interview/团队协作与职责边界.md',
     'wiki/interview/央国企研究所项目面试问答.md',
     'wiki/interview/科研院所面试专项.md',
+    'wiki/interview/自我介绍与核心竞争力.md',
     'wiki/interview/护城河与不可替代性.md',
     'wiki/interview/高频问答库.md',
     'wiki/projects/千言·AI智能助手后端系统.md',
+    'wiki/projects/横向军工项目面试介绍.md',
+    'wiki/interview/军工横向项目文档开发与规范问答.md',
 ]
 EXCLUDED_LINKS = {
     'index','log','AGENTS','SCHEMA','自我介绍与核心竞争力','动机与稳定性话术',

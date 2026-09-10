@@ -30,7 +30,7 @@ const categoryDescriptions = {
 };
 const categoryOf = (title) => {
   if (title.includes('自我介绍') || title.includes('速背')) return '面试速背';
-  if (['XMagital','团队协作','千言'].some(x => title.includes(x))) return '项目面试';
+  if (['XMagital','团队协作','千言','军工横向项目','简历追问题库'].some(x => title.includes(x))) return '项目面试';
   if (title.includes('科研院所') || title.includes('央国企')) return '单位与岗位';
   return '通用面试';
 };
